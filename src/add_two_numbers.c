@@ -9,11 +9,11 @@ struct ListNode {
 struct ListNode *
 append_node(struct ListNode **head, int number)
 {
-	struct listnode *beginning = malloc(sizeof(struct listnode)),
-					*end = null;
+	struct ListNode *beginning = malloc(sizeof(struct ListNode)),
+					*end = NULL;
 
 	beginning->val = number;
-	beginning->next =  null;
+	beginning->next = NULL;
 
 	if (!*head) *head = beginning;
 	else {
@@ -26,7 +26,8 @@ append_node(struct ListNode **head, int number)
 }
 
 struct ListNode *
-addTwoNumbers(struct ListNode *l1, struct ListNode *l2) {
+addTwoNumbers(struct ListNode *l1, struct ListNode *l2)
+{
 	int carried = 0; 
 	struct ListNode *result = NULL;
 
@@ -85,7 +86,9 @@ main(void)
  * @example l1: [9, 9, 9, 9]
  * @example l2: [9, 9, 9, 9, 9, 9]
  * @code
- * struct ListNode* addTwoNumbers(struct ListNode* l1, struct ListNode* l2) {
+ * struct ListNode*
+ * addTwoNumbers(struct ListNode* l1, struct ListNode* l2)
+ * {
  *     int carried = 0;
  *     struct ListNode *result = NULL;
  * 
