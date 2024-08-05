@@ -100,9 +100,9 @@ create_table(size_t size)
     Table *hash_table = (Table *) malloc(sizeof(Table));
 
     if (hash_table) {
-        hash_table->items = (Item **) malloc(sizeof(Item *) * TABLE_SIZE);
+        hash_table->items = (Item **) malloc(sizeof(Item *) * size);
 
-        for (size_t i = 0; i < TABLE_SIZE; ++i) hash_table->items[i] = NULL;
+        for (size_t i = 0; i < size; ++i) hash_table->items[i] = NULL;
 
         return hash_table;
     }
@@ -115,12 +115,11 @@ lengthOfLongestSubstring(char* s)
 {
     if (strlen(s) == 0) return -1;
     
-    Table *str_table = create_table(TABLE_SIZE);
-    int substr_length = INT_MIN, left = 0;
+    int substr_length = INT_MIN;
 
-    for (int right = 0; right < strlen(s); ++right) {
-        while (str_table)
-    }
+    //for (int right = 0; right < (int) strlen(s); ++right) {
+    //    while (str_table))
+    //}
 
     return substr_length;
 }
